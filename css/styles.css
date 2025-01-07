@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    background: url('/img/bg.jpeg') no-repeat center center/cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height:100vh; /* Ensure body takes up full height */
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    flex: 1; /* Pushes the footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Typography */
+h1, h2, .bold-text {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.condi {
+    color: orange;
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+/* Timer Styles */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 15px auto;
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.timer span {
+    background: #272744;
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.timer label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* Button Styles */
+button {
+    display: inline-block; /* Makes the button shrink-wrap its content */
+    padding: 10px 20px; /* Controls the space inside the button */
+    font-size: 16px; /* Ensures appropriate text size */
+    border: none;
+    border-radius: 50px; /* Rounded edges */
+    background: #007bff; /* Button color */
+    color: white; /* Text color */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth to the button */
+    text-align: center; /* Centers text inside the button */
+    white-space: nowrap; /* Prevents text from wrapping */
+    width: 40%; /* Sets button width */
+    margin: 0 auto; /* Centers the button horizontally */
+    max-width: none; /* Prevents parent container from enforcing a max-width */
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #007bff;
+}
+
+footer p {
+    margin: 5px 0 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body{
+         min-height:92vh;
+    }
+    
+   
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .bold-text {
+        font-size: 1rem;
+    }
+
+    .timer {
+        font-size: 1.6rem;
+        height: auto; /* Avoid setting a fixed height for responsiveness */
+    }
+
+    button {
+        font-size: 14px;
+        width: auto;
+    }
+    
+      footer p {
+        font-size: 0.75rem;
+        line-height: 1.1;
+    }
+
+}
+
+@media (max-width: 576px) {
+    
+   button {
+        font-size: 14px;
+        width: auto;
+    }
+    
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    footer .social-links a {
+        font-size: 1.2rem;
+    }
+}
